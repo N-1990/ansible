@@ -1,4 +1,4 @@
-# PLAY level variable
+# TASK level variable
 
 - name: variables form PLAY level
   hosts: localhost
@@ -8,5 +8,7 @@
     duriation: "110HR"
   tasks:
   - name: check variables
+    vars: #task level
+      course: "devops with cloud"
     ansible.builtin.debug:
       msg: "Hi, I am laurning {{course}}, Trinar is {{Triner}}, duriation is {{duriation}}"
